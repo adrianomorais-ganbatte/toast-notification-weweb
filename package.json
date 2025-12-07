@@ -1,0 +1,14 @@
+{
+  "name": "toast-notification",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "weweb build name=toast-notification type=wwobject",
+    "serve": "weweb serve"
+  },
+  "devDependencies": {
+    "@weweb/cli": "latest"
+  },
+  "dependencies": {
+    "lucide-vue-next": "^0.556.0"
+  }
+}
