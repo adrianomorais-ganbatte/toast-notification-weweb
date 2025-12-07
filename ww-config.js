@@ -220,16 +220,28 @@ export default {
       defaultValue: "#ef4444",
       section: "settings",
     },
-    // Icon Size
-    iconSize: {
+    // Icon Sizes
+    mainIconSize: {
       label: {
-        en: "Icon Size",
-        pt: "Tamanho do Ícone",
+        en: "Main Icon Size",
+        pt: "Tamanho do Ícone Principal",
       },
       type: "Number",
       defaultValue: 20,
       min: 16,
       max: 48,
+      step: 2,
+      section: "settings",
+    },
+    closeIconSize: {
+      label: {
+        en: "Close Icon Size",
+        pt: "Tamanho do Ícone Fechar",
+      },
+      type: "Number",
+      defaultValue: 16,
+      min: 12,
+      max: 32,
       step: 2,
       section: "settings",
     },

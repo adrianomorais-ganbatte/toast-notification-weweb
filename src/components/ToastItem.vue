@@ -3,10 +3,10 @@
     <div class="toast-content">
       <div class="toast-left">
         <div class="toast-icon">
-          <CheckCircle2 v-if="toast.type === 'success'" :size="iconSize" />
-          <Info v-else-if="toast.type === 'info'" :size="iconSize" />
-          <AlertTriangle v-else-if="toast.type === 'warning'" :size="iconSize" />
-          <XCircle v-else-if="toast.type === 'error'" :size="iconSize" />
+          <CheckCircle2 v-if="toast.type === 'success'" :size="mainIconSize" />
+          <Info v-else-if="toast.type === 'info'" :size="mainIconSize" />
+          <AlertTriangle v-else-if="toast.type === 'warning'" :size="mainIconSize" />
+          <XCircle v-else-if="toast.type === 'error'" :size="mainIconSize" />
         </div>
         <div class="toast-body">
           <div class="toast-header">
@@ -20,7 +20,7 @@
         </div>
       </div>
       <button class="toast-close" @click="$emit('close')" aria-label="Close">
-        <X :size="16" />
+        <X :size="closeIconSize" />
       </button>
     </div>
   </div>
@@ -119,10 +119,14 @@ export default {
       type: String,
       default: '#ef4444',
     },
-    // Icon Size
-    iconSize: {
+    // Icon Sizes
+    mainIconSize: {
       type: Number,
       default: 20,
+    },
+    closeIconSize: {
+      type: Number,
+      default: 16,
     },
   },
   data() {

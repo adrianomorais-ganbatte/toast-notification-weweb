@@ -146,4 +146,3 @@ MIT
 ---
 
 **Desenvolvido para WeWeb** | Componente reutilizável Vue 3
-# toast-notification-weweb

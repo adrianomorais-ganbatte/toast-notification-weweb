@@ -24,7 +24,8 @@
         :error-border-color="content.errorBorderColor"
         :error-text-color="content.errorTextColor"
         :error-icon-color="content.errorIconColor"
-        :icon-size="content.iconSize"
+        :main-icon-size="content.mainIconSize"
+        :close-icon-size="content.closeIconSize"
         @close="dismissToast(toast.id)"
       />
     </transition-group>
@@ -82,8 +83,9 @@ export default {
     errorBorderColor: '#ef4444',
     errorTextColor: '#7f1d1d',
     errorIconColor: '#ef4444',
-    // Icon Size
-    iconSize: 20,
+    // Icon Sizes
+    mainIconSize: 20,
+    closeIconSize: 16,
   },
   methods: {
     showSuccessToast(title, description, durationMs) {
