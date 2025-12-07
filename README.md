@@ -108,23 +108,6 @@ npm run build          # Build de produção
 | `description` | String | Texto adicional (não renderiza se omitido) |
 | `durationMs` | Number | Duração customizada em ms |
 
-## 🎨 Design
-
-Baseado no design de referência:
-- Background escuro (`#2c3e50`)
-- Ícones coloridos por tipo
-- Layout: ícone + tipo + título + descrição? + timestamp
-- Animações de slide-in/out suaves
-
-## ✅ Critérios de Aceitação
-
-Todos os critérios do [PRD](docs/prd.md) foram atendidos:
-
-- ✅ CA-01: Toast mínimo (apenas título) funciona e auto-dismiss
-- ✅ CA-02: Toast com descrição renderiza corretamente
-- ✅ CA-03: Payload inválido não exibe toast e emite evento de erro
-- ✅ CA-04: Múltiplos toasts empilham corretamente
-
 ## 🤝 Contribuindo
 
 1. Fork o projeto
