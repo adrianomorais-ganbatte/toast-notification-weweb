@@ -4,7 +4,7 @@ export default {
       en: "Toast Notification Host",
       pt: "Host de Notificações Toast",
     },
-    icon: "fontawesome/solid/bell",
+    icon: "bell",
   },
   properties: {
     defaultDuration: {
@@ -13,8 +13,9 @@ export default {
         pt: "Duração Padrão (ms)",
       },
       type: "Number",
-      defaultValue: 5000,
       section: "settings",
+      defaultValue: 5000,
+      bindable: true,
     },
     position: {
       label: {
@@ -22,16 +23,16 @@ export default {
         pt: "Posição",
       },
       type: "TextSelect",
+      section: "settings",
       options: {
         options: [
-          { value: "top-right", label: "Top Right" },
-          { value: "top-left", label: "Top Left" },
-          { value: "bottom-right", label: "Bottom Right" },
-          { value: "bottom-left", label: "Bottom Left" },
+          { value: "top-right", label: { en: "Top Right", pt: "Cima Direita" } },
+          { value: "top-left", label: { en: "Top Left", pt: "Cima Esquerda" } },
+          { value: "bottom-right", label: { en: "Bottom Right", pt: "Baixo Direita" } },
+          { value: "bottom-left", label: { en: "Bottom Left", pt: "Baixo Esquerda" } },
         ],
       },
       defaultValue: "top-right",
-      section: "settings",
     },
     maxToasts: {
       label: {
@@ -39,8 +40,9 @@ export default {
         pt: "Máximo de Toasts",
       },
       type: "Number",
-      defaultValue: 5,
       section: "settings",
+      defaultValue: 5,
+      bindable: true,
     },
     language: {
       label: {
@@ -48,14 +50,14 @@ export default {
         pt: "Idioma",
       },
       type: "TextSelect",
+      section: "settings",
       options: {
         options: [
-          { value: "en", label: "English (US)" },
-          { value: "pt", label: "Português (BR)" },
+          { value: "en", label: { en: "English", pt: "Inglês" } },
+          { value: "pt", label: { en: "Portuguese", pt: "Português" } },
         ],
       },
       defaultValue: "en",
-      section: "settings",
     },
     showTimestamp: {
       label: {
@@ -63,137 +65,331 @@ export default {
         pt: "Exibir Horário",
       },
       type: "OnOff",
-      defaultValue: true,
       section: "settings",
+      defaultValue: true,
     },
     showEditorPlaceholder: {
       label: {
         en: "Show Editor Placeholder",
-        pt: "Exibir Placeholder do Editor",
+        pt: "Exibir Placeholder",
       },
       type: "OnOff",
-      defaultValue: true,
       section: "settings",
+      defaultValue: true,
     },
     successBackgroundColor: {
-      label: { en: "Success Background", pt: "Fundo Sucesso" },
+      label: {
+        en: "Success Background",
+        pt: "Fundo Sucesso",
+      },
       type: "Color",
-      defaultValue: "#d1fae5",
       section: "settings",
+      defaultValue: "#d1fae5",
+      bindable: true,
     },
     successBorderColor: {
-      label: { en: "Success Border", pt: "Borda Sucesso" },
+      label: {
+        en: "Success Border",
+        pt: "Borda Sucesso",
+      },
       type: "Color",
-      defaultValue: "#10b981",
       section: "settings",
+      defaultValue: "#10b981",
+      bindable: true,
     },
     successTextColor: {
-      label: { en: "Success Text", pt: "Texto Sucesso" },
+      label: {
+        en: "Success Text",
+        pt: "Texto Sucesso",
+      },
       type: "Color",
-      defaultValue: "#064e3b",
       section: "settings",
+      defaultValue: "#064e3b",
+      bindable: true,
     },
     successIconColor: {
-      label: { en: "Success Icon", pt: "Ícone Sucesso" },
+      label: {
+        en: "Success Icon",
+        pt: "Ícone Sucesso",
+      },
       type: "Color",
-      defaultValue: "#10b981",
       section: "settings",
+      defaultValue: "#10b981",
+      bindable: true,
     },
     infoBackgroundColor: {
-      label: { en: "Info Background", pt: "Fundo Info" },
+      label: {
+        en: "Info Background",
+        pt: "Fundo Info",
+      },
       type: "Color",
-      defaultValue: "#dbeafe",
       section: "settings",
+      defaultValue: "#dbeafe",
+      bindable: true,
     },
     infoBorderColor: {
-      label: { en: "Info Border", pt: "Borda Info" },
+      label: {
+        en: "Info Border",
+        pt: "Borda Info",
+      },
       type: "Color",
-      defaultValue: "#3b82f6",
       section: "settings",
+      defaultValue: "#3b82f6",
+      bindable: true,
     },
     infoTextColor: {
-      label: { en: "Info Text", pt: "Texto Info" },
+      label: {
+        en: "Info Text",
+        pt: "Texto Info",
+      },
       type: "Color",
-      defaultValue: "#1e3a8a",
       section: "settings",
+      defaultValue: "#1e3a8a",
+      bindable: true,
     },
     infoIconColor: {
-      label: { en: "Info Icon", pt: "Ícone Info" },
+      label: {
+        en: "Info Icon",
+        pt: "Ícone Info",
+      },
       type: "Color",
-      defaultValue: "#3b82f6",
       section: "settings",
+      defaultValue: "#3b82f6",
+      bindable: true,
     },
     warningBackgroundColor: {
-      label: { en: "Warning Background", pt: "Fundo Aviso" },
+      label: {
+        en: "Warning Background",
+        pt: "Fundo Aviso",
+      },
       type: "Color",
-      defaultValue: "#fef3c7",
       section: "settings",
+      defaultValue: "#fef3c7",
+      bindable: true,
     },
     warningBorderColor: {
-      label: { en: "Warning Border", pt: "Borda Aviso" },
+      label: {
+        en: "Warning Border",
+        pt: "Borda Aviso",
+      },
       type: "Color",
-      defaultValue: "#f59e0b",
       section: "settings",
+      defaultValue: "#f59e0b",
+      bindable: true,
     },
     warningTextColor: {
-      label: { en: "Warning Text", pt: "Texto Aviso" },
+      label: {
+        en: "Warning Text",
+        pt: "Texto Aviso",
+      },
       type: "Color",
-      defaultValue: "#78350f",
       section: "settings",
+      defaultValue: "#78350f",
+      bindable: true,
     },
     warningIconColor: {
-      label: { en: "Warning Icon", pt: "Ícone Aviso" },
+      label: {
+        en: "Warning Icon",
+        pt: "Ícone Aviso",
+      },
       type: "Color",
-      defaultValue: "#f59e0b",
       section: "settings",
+      defaultValue: "#f59e0b",
+      bindable: true,
     },
     errorBackgroundColor: {
-      label: { en: "Error Background", pt: "Fundo Erro" },
+      label: {
+        en: "Error Background",
+        pt: "Fundo Erro",
+      },
       type: "Color",
-      defaultValue: "#fee2e2",
       section: "settings",
+      defaultValue: "#fee2e2",
+      bindable: true,
     },
     errorBorderColor: {
-      label: { en: "Error Border", pt: "Borda Erro" },
+      label: {
+        en: "Error Border",
+        pt: "Borda Erro",
+      },
       type: "Color",
-      defaultValue: "#ef4444",
       section: "settings",
+      defaultValue: "#ef4444",
+      bindable: true,
     },
     errorTextColor: {
-      label: { en: "Error Text", pt: "Texto Erro" },
+      label: {
+        en: "Error Text",
+        pt: "Texto Erro",
+      },
       type: "Color",
-      defaultValue: "#7f1d1d",
       section: "settings",
+      defaultValue: "#7f1d1d",
+      bindable: true,
     },
     errorIconColor: {
-      label: { en: "Error Icon", pt: "Ícone Erro" },
+      label: {
+        en: "Error Icon",
+        pt: "Ícone Erro",
+      },
       type: "Color",
-      defaultValue: "#ef4444",
       section: "settings",
+      defaultValue: "#ef4444",
+      bindable: true,
     },
     mainIconSize: {
-      label: { en: "Main Icon Size", pt: "Tamanho Ícone Principal" },
+      label: {
+        en: "Main Icon Size",
+        pt: "Tamanho Ícone Principal",
+      },
       type: "Number",
-      defaultValue: 20,
       section: "settings",
+      defaultValue: 20,
+      bindable: true,
     },
     closeIconSize: {
-      label: { en: "Close Icon Size", pt: "Tamanho Ícone Fechar" },
+      label: {
+        en: "Close Icon Size",
+        pt: "Tamanho Ícone Fechar",
+      },
       type: "Number",
-      defaultValue: 16,
       section: "settings",
+      defaultValue: 16,
+      bindable: true,
     },
   },
+  actions: [
+    {
+      label: {
+        en: "Show Success Toast",
+        pt: "Exibir Toast Sucesso",
+      },
+      action: "showSuccessToast",
+      args: [
+        {
+          name: "title",
+          type: "Text",
+          bindable: true,
+        },
+        {
+          name: "description",
+          type: "Text",
+          bindable: true,
+        },
+        {
+          name: "durationMs",
+          type: "Number",
+          bindable: true,
+        },
+      ],
+    },
+    {
+      label: {
+        en: "Show Info Toast",
+        pt: "Exibir Toast Info",
+      },
+      action: "showInfoToast",
+      args: [
+        {
+          name: "title",
+          type: "Text",
+          bindable: true,
+        },
+        {
+          name: "description",
+          type: "Text",
+          bindable: true,
+        },
+        {
+          name: "durationMs",
+          type: "Number",
+          bindable: true,
+        },
+      ],
+    },
+    {
+      label: {
+        en: "Show Warning Toast",
+        pt: "Exibir Toast Aviso",
+      },
+      action: "showWarningToast",
+      args: [
+        {
+          name: "title",
+          type: "Text",
+          bindable: true,
+        },
+        {
+          name: "description",
+          type: "Text",
+          bindable: true,
+        },
+        {
+          name: "durationMs",
+          type: "Number",
+          bindable: true,
+        },
+      ],
+    },
+    {
+      label: {
+        en: "Show Error Toast",
+        pt: "Exibir Toast Erro",
+      },
+      action: "showErrorToast",
+      args: [
+        {
+          name: "title",
+          type: "Text",
+          bindable: true,
+        },
+        {
+          name: "description",
+          type: "Text",
+          bindable: true,
+        },
+        {
+          name: "durationMs",
+          type: "Number",
+          bindable: true,
+        },
+      ],
+    },
+    {
+      label: {
+        en: "Show Toast (Advanced)",
+        pt: "Exibir Toast (Avançado)",
+      },
+      action: "showToast",
+      args: [
+        {
+          name: "data",
+          type: "Object",
+          bindable: true,
+        },
+      ],
+    },
+  ],
   triggerEvents: [
     {
       name: "toastShown",
-      label: { en: "Toast Shown", pt: "Toast Exibido" },
-      event: { toast: {} },
+      label: {
+        en: "Toast Shown",
+        pt: "Toast Exibido",
+      },
+      event: {
+        toast: {},
+      },
     },
     {
       name: "toastDismissed",
-      label: { en: "Toast Dismissed", pt: "Toast Removido" },
-      event: { toastId: "" },
+      label: {
+        en: "Toast Dismissed",
+        pt: "Toast Removido",
+      },
+      event: {
+        toastId: "",
+      },
     },
   ],
 };
