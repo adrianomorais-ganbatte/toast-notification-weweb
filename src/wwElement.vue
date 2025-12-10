@@ -294,39 +294,11 @@ export default {
 
 <style lang="scss" scoped>
 .toast-notification-host {
-  position: fixed;
-  z-index: 9999;
-  pointer-events: none;
-
-  &.position-top-right {
-    top: 24px;
-    right: 24px;
-  }
-
-  &.position-top-left {
-    top: 24px;
-    left: 24px;
-  }
-
-  &.position-bottom-right {
-    bottom: 24px;
-    right: 24px;
-  }
-
-  &.position-bottom-left {
-    bottom: 24px;
-    left: 24px;
-  }
-
-  @media (max-width: 768px) {
-    top: 16px !important;
-    left: 50% !important;
-    right: auto !important;
-    bottom: auto !important;
-    transform: translateX(-50%);
-    width: 90%;
-    max-width: 90%;
-  }
+  // Wrapper visível no editor - NÃO usar position:fixed aqui!
+  position: relative;
+  display: inline-block;
+  min-width: 200px;
+  min-height: 80px;
 }
 
 .toast-editor-placeholder {
@@ -361,13 +333,42 @@ export default {
 }
 
 .toast-container {
+  position: fixed;
+  z-index: 9999;
   display: flex;
   flex-direction: column;
   pointer-events: auto;
 
+  // Positioning based on parent class
+  .position-top-right & {
+    top: 24px;
+    right: 24px;
+  }
+
+  .position-top-left & {
+    top: 24px;
+    left: 24px;
+  }
+
+  .position-bottom-right & {
+    bottom: 24px;
+    right: 24px;
+  }
+
+  .position-bottom-left & {
+    bottom: 24px;
+    left: 24px;
+  }
+
   @media (max-width: 768px) {
+    top: 16px !important;
+    left: 50% !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 90%;
     align-items: center;
-    width: 100%;
   }
 }
 
